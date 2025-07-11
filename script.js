@@ -116,7 +116,14 @@ const sendTask = async (event) => {
     const html = markdownToHTML(rawResponse)
 
     aiResponse.classList.remove('hidden')
-    aiResponse.querySelector('.responseContent').innerHTML = html
+    const responseContent = aiResponse.querySelector('.responseContent')
+		responseContent.innerHTML = html
+
+		// resetando animação pra rodar toda vez
+		responseContent.style.animation = 'none'
+		responseContent.offsetHeight
+		responseContent.style.animation = ''
+		aiResponse.querySelector('.responseContent').innerHTML = html
   } catch (error) {
     console.error(error)
     alert("Deu ruim! Algo deu errado ao enviar a tarefa pra Lia.")

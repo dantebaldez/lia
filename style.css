@@ -269,3 +269,43 @@ body.light form .askButton button {
 body.light form .askButton button:hover {
   background: linear-gradient(135deg, #ffcc66, #9933cc);
 }
+
+.responseContent {
+  font-size: 1.1rem;
+	opacity: 0;
+  transform: translateY(15px);
+  animation: fadeSlideUp 0.6s forwards ease-out;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LIGHT MODE - fundo clarinho nas tags da .intro */
+body.light .intro h2,
+body.light .intro p,
+body.light .intro ul {
+  background-color: #f2f2f2;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  list-style-position: inside; /* pra ul ficar bonitinha */
+  color: #333; /* texto escuro pra contraste */
+}
+
+/* DARK MODE - fundo escuro suave, texto clarinho */
+body:not(.light) .intro h2,
+body:not(.light) .intro p,
+body:not(.light) .intro ul {
+  background-color: #666666; /* ou #555555 se quiser mais suave */
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  color: #e0e0e0; /* texto clarinho pra leitura */
+  list-style-position: inside;
+}
