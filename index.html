@@ -121,5 +121,41 @@
       taskInput.style.height = taskInput.scrollHeight + 'px';
     });
   </script>
+  <script>
+    // Script do toggle dark/light mode
+    const themeToggle = document.querySelector('.theme-toggle')
+    const iconSun = document.querySelector('.icon-sun')
+    const iconMoon = document.querySelector('.icon-moon')
+
+    const setTheme = (theme) => {
+      if(theme === 'dark'){
+        document.body.classList.add('dark')
+        iconSun.style.display = 'block'
+        iconMoon.style.display = 'none'
+      } else {
+        document.body.classList.remove('dark')
+        iconSun.style.display = 'none'
+        iconMoon.style.display = 'block'
+      }
+      localStorage.setItem('theme', theme)
+    }
+
+    // Checa o tema salvo no localStorage e aplica, padrão dark
+    const savedTheme = localStorage.getItem('theme')
+    if(savedTheme){
+      setTheme(savedTheme)
+    } else {
+      setTheme('dark')
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light'
+      if(currentTheme === 'dark'){
+        setTheme('light')
+      } else {
+        setTheme('dark')
+      }
+    })
+  </script>
 </body>
 </html>

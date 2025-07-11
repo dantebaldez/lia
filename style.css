@@ -1,23 +1,29 @@
+/* Fonte e box-sizing gerais */
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
+/* BODY - DARK MODE por padrão */
 body {
-  background-color: #f2f2f2;
+  background-color: #333333; /* Cinza Escuro da paleta */
   margin: 0;
   padding: 0;
   font-size: 16px;
   line-height: 1.5;
+  color: #cccccc; /* Cinza Claro pra texto */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* HEADER */
 .header-content {
-  background: linear-gradient(135deg, #9933cc, #336699);
+  background: linear-gradient(135deg, #9933cc, #336699); /* Roxo e Azul Escuro */
   color: #ffffff;
   padding: 1rem 1rem 0.5rem 1rem;
   position: relative;
 }
 
+/* ROW DO HEADER */
 .header-row {
   display: flex;
   align-items: center;
@@ -29,6 +35,7 @@ body {
   min-height: 4rem;
 }
 
+/* Branding */
 .branding {
   position: absolute;
   left: 50%;
@@ -40,6 +47,7 @@ body {
   white-space: nowrap;
 }
 
+/* Logo */
 .branding img {
   width: 3.2rem;
   height: 3.2rem;
@@ -48,6 +56,7 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Título da Branding */
 .branding h1 {
   font-size: 1.5rem;
   letter-spacing: -0.5px;
@@ -56,9 +65,9 @@ body {
   margin: 0;
 }
 
-/* Botão toggle alinhado horizontalmente com a branding */
+/* Botão toggle tema - DARK MODE */
 .theme-toggle {
-  background: #f2f2f2;
+  background: #f2f2f2; /* Bege Claro no botão pra destacar */
   border: none;
   border-radius: 50%;
   width: 3rem;
@@ -78,6 +87,7 @@ body {
   flex-shrink: 0;
 }
 
+/* Greeting */
 .greeting {
   display: flex;
   flex-direction: column;
@@ -86,6 +96,7 @@ body {
   margin-top: 1rem;
 }
 
+/* MAIN */
 main {
   display: flex;
   flex-direction: column;
@@ -94,27 +105,27 @@ main {
   align-items: center;
 }
 
-.intro {
-  background: #fff;
+/* SECTIONS - DARK MODE */
+.intro,
+.formSection {
+  background: #444444; /* um cinza médio mais escuro */
   border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1.5px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6), 0 1.5px 4px rgba(0, 0, 0, 0.8);
   padding: 2rem 1.5rem;
   max-width: 380px;
   width: 100%;
   margin: 0 0 2rem 0;
-  align-self: flex-start;
+  color: #cccccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* FormSection tem largura maior */
 .formSection {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1.5px 4px rgba(0, 0, 0, 0.06);
-  padding: 2rem 1.5rem;
   max-width: 720px;
-  width: 100%;
   margin: 0 auto;
 }
 
+/* FORM input e textarea */
 form .input-row {
   display: flex;
   gap: 1rem;
@@ -122,18 +133,18 @@ form .input-row {
   flex-direction: column;
 }
 
-form .input-row input[type="password"] {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-}
-
+form .input-row input[type="password"],
 form .input-row textarea {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #6699cc; /* Azul Claro */
   border-radius: 0.5rem;
+  background-color: #555555; /* cinza médio escuro para inputs no dark */
+  color: #f2f2f2; /* texto claro */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+form .input-row textarea {
   resize: vertical;
   min-height: 2.5rem;
   width: 100%;
@@ -143,6 +154,7 @@ form .input-row textarea {
   line-height: 1.5;
 }
 
+/* BOTÃO ENVIAR - DARK MODE */
 form .askButton {
   width: 100%;
 }
@@ -151,7 +163,7 @@ form .askButton button {
   width: 100%;
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
-  background: linear-gradient(135deg, #336699, #9933cc);
+  background: linear-gradient(135deg, #336699, #9933cc); /* Azul Escuro + Roxo */
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -160,10 +172,29 @@ form .askButton button {
 }
 
 form .askButton button:hover {
-  background: linear-gradient(135deg, #ffcc66, #9933cc);
+  background: linear-gradient(135deg, #ffcc66, #9933cc); /* Laranja Claro + Roxo */
   transform: scale(1.05);
 }
 
+/* Animação de pulso */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 10px 10px rgba(255, 204, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 102, 0);
+  }
+}
+
+.pulsing {
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 0 0 rgba(255, 204, 102, 0.7);
+}
+
+/* MEDIA QUERY - mantém igual só pra responsividade */
 @media (min-width: 768px) {
   .header-content {
     padding: 1.25rem 4vw 1rem 4vw;
@@ -202,4 +233,39 @@ form .askButton button:hover {
   form .input-row {
     margin-bottom: 1.5rem;
   }
+}
+
+/* ----------- LIGHT MODE -------------- */
+body.light {
+  background-color: #f2f2f2; /* Bege Claro */
+  color: #333333; /* Cinza Escuro */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light .header-content {
+  background: linear-gradient(135deg, #9933cc, #336699); /* Mantém a mesma */
+  color: #ffffff;
+}
+
+body.light .intro,
+body.light .formSection {
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1.5px 4px rgba(0, 0, 0, 0.06);
+  color: #333333;
+}
+
+body.light form .input-row input[type="password"],
+body.light form .input-row textarea {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333333;
+}
+
+body.light form .askButton button {
+  background: linear-gradient(135deg, #336699, #9933cc);
+  color: #fff;
+}
+
+body.light form .askButton button:hover {
+  background: linear-gradient(135deg, #ffcc66, #9933cc);
 }
