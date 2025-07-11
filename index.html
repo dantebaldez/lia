@@ -1,77 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lia</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="./assets/favicon.png" type="image/png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-	<header class="header-content">
-		<div class="branding">
-			<img src="./assets/logo.png" alt="lia logo" class="logo">
-			<h1>Lia - Sua secretária virtual</h1>
-			<p>Olá patrão, pode falar</p>
-		</div>
-		<button class="theme-toggle" aria-label="Alternar modo claro/escuro">
-			<!-- light mode -->
-			<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-				stroke-linejoin="round" width="24" height="24">
-				<circle cx="12" cy="12" r="5"></circle>
-				<line x1="12" y1="1" x2="12" y2="3"></line>
-				<line x1="12" y1="21" x2="12" y2="23"></line>
-				<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-				<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-				<line x1="1" y1="12" x2="3" y2="12"></line>
-				<line x1="21" y1="12" x2="23" y2="12"></line>
-				<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-				<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-			</svg>
+  <header class="header-content">
+    <div class="header-row">
+      <div class="branding">
+        <div class="logo">
+          <img src="./assets/logo.png" alt="lia logo" />
+        </div>
+        <div class="title">
+          <h1>Lia - Sua secretária virtual</h1>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="Alternar modo claro/escuro">
+        <!-- light mode -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" width="24" height="24">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <!-- dark mode -->
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" width="24" height="24" style="display: none">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="greeting">
+      <p>Olá chefe, pode falar</p>
+    </div>
+  </header>
 
-			<!-- dark mode -->
-			<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-				stroke-linejoin="round" width="24" height="24" style="display: none">
-				<path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
-			</svg>
-		</button>
-	</header>
+  <main>
+    <section class="intro">
+      <div>
+        <h2>O que Lia pode fazer por você?</h2>
+        <p>Lia é uma assistente virtual que pode ajudar com diversas tarefas, como:</p>
+        <ul>
+          <li>Gerenciar sua agenda</li>
+          <li>Responder perguntas frequentes</li>
+          <li>Fornecer informações sobre o clima</li>
+          <li>Entre outras funcionalidades!</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Como tirar sua chave do Google Gemini</h3>
+        <ul>
+          Vai pro site do
+          <a href="https://makersuite.google.com/app">Google AI Studio</a>
+        </ul>
+        <ul>Faça login com sua conta Google (a que tu usa pra tudo, pode ser pessoal mesmo)</ul>
+        <ul>No painel, vai ter uma aba chamada "API Key" ou algo como "Get API key". Clica nela</ul>
+        <ul>Aí é só seguir as instruções e gerar uma chave nova.</ul>
+        <ul>
+          O Google vai mostrar um código tipo isso aqui:
+          <code>AIzaSyD-EXEMPLO1234567890</code>
+        </ul>
+        <ul>Copia esse código e cola no campo "API KEY" do formulário acima.</ul>
+        <p style="font-weight: bold;">
+          Dica extra: ativar o projeto no Console do Google Cloud
+        </p>
+      </div>
+    </section>
+    <section class="formSection">
+      <h2>Vamos começar então</h2>
+      <form action="" id="form">
+        <div class="input-row">
+          <input
+            id="apiKey"
+            type="password"
+            placeholder="Cole sua chave do Google Gemini aqui"
+            required
+          />
+          <textarea 
+            id="taskInput" 
+            placeholder="Pode dar minha tarefa" 
+            rows="1"></textarea>
+        </div>
+        <div class="askButton">
+          <button type="submit" id="submitButton">Enviar tarefa para Lia</button>
+        </div>
+      </form>
+      <div id="liaResponse" class="hidden">
+        <div class="responseContent"></div>
+      </div>
+    </section>
+  </main>
 
-	<main>
-		<section class="intro">
-			<div>
-				<h2>O que Lia pode fazer por você?</h2>
-				<p>Lia é uma assistente virtual que pode ajudar com diversas tarefas, como:</p>
-				<ul>
-					<li>Gerenciar sua agenda</li>
-					<li>Responder perguntas frequentes</li>
-					<li>Fornecer informações sobre o clima</li>
-					<li>Entre outras funcionalidades!</li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="tutorial">
-			<div>
-				<h3>Como tirar sua chave do Google Gemini</h3>
-				<ul>Vai pro site do <a href="https://makersuite.google.com/app">Google AI Studio</a></ul>
-				<ul>Faça login com sua conta Google (a que tu usa pra tudo, pode ser pessoal mesmo)</ul>
-				<ul>No painel, vai ter uma aba chamada "API Key" ou algo como "Get API key". Clica nela</ul>
-				<ul>Aí é só seguir as instruções e gerar uma chave nova.</ul>
-				<ul>O Google vai mostrar um código tipo isso aqui:
-					<code>AIzaSyD-EXEMPLO1234567890</code>
-				</ul>
-				<ul>Copia esse código e cola no campo "API KEY" do formulário acima.</ul>
-				<h3>Dica extra: ativar o projeto no Console do Google Cloud</h3>
-			</div>
-		</section>
-	</main>
+  <script src="/script.js"></script>
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script class="textarea">
+    const taskInput = document.getElementById('taskInput');
+    taskInput.addEventListener('input', () => {
+      taskInput.style.height = 'auto';
+      taskInput.style.height = taskInput.scrollHeight + 'px';
+    });
+  </script>
 </body>
 </html>
