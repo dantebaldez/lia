@@ -154,14 +154,14 @@ const iconSun = document.querySelector('.icon-sun')
 const iconMoon = document.querySelector('.icon-moon')
 
 const setTheme = (theme) => {
-  if(theme === 'dark'){
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
+  if (theme === 'dark') {
+    document.body.classList.add('dark')      // ADICIONA a classe 'dark'
+    document.body.classList.remove('light')  // Remove 'light'
     iconSun.style.display = 'block'
     iconMoon.style.display = 'none'
   } else {
-    document.body.classList.remove('dark')
-    document.body.classList.add('light')
+    document.body.classList.remove('dark')   // Remove 'dark'
+    document.body.classList.add('light')     // ADICIONA a classe 'light'
     iconSun.style.display = 'none'
     iconMoon.style.display = 'block'
   }
@@ -175,7 +175,6 @@ if(savedTheme){
 } else {
   setTheme('dark')
 }
-
 themeToggle.addEventListener('click', () => {
   const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light'
   setTheme(currentTheme === 'dark' ? 'light' : 'dark')
