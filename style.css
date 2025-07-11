@@ -243,7 +243,7 @@ body.light {
 }
 
 body.light .header-content {
-  background: linear-gradient(135deg, #9933cc, #336699); /* mantém */
+  background: linear-gradient(135deg, #9933cc, #336699);
   color: #ffffff;
 }
 
@@ -301,11 +301,11 @@ body.light .intro ul {
 body:not(.light) .intro h2,
 body:not(.light) .intro p,
 body:not(.light) .intro ul {
-  background-color: #666666; /* ou #555555 se quiser mais suave */
+  background-color: #666666;
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   margin-bottom: 0.8rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  color: #e0e0e0; /* texto clarinho pra leitura */
+  color: #e0e0e0;
   list-style-position: inside;
 }
